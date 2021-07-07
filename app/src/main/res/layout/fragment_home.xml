@@ -13,7 +13,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:textAlignment="center"
         android:textSize="20sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,5 +30,6 @@
         android:id="@+id/rotation_view"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:focusable="false"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -106,10 +106,6 @@ public class RotationLoadingView extends View {
         transparentPaint.setStyle(Paint.Style.STROKE);
         transparentPaint.setAntiAlias(true);
         transparentPaint.setDither(true);
-
-        this.setOnClickListener((View view) -> {
-            startAnimator();
-        });
     }
 
     /**
@@ -187,7 +183,7 @@ public class RotationLoadingView extends View {
             // 计算大圆的参数
             float strokeWidth = sqrtDistance * (1 - value);
             transparentPaint.setStrokeWidth(strokeWidth);
-            tpRadius = strokeWidth / 2 + sqrtDistance - strokeWidth;
+            tpRadius = strokeWidth / 2 + (sqrtDistance - strokeWidth);
             // 计算6 个小圆的参数
             deltaAngle = (1 - value) * 4 * Math.PI;
             value = (float) (value * 1.25);
